@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/* Overarching template layout */
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    min-height: 100px;
+    background-color: #0A2239;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.panel-left {
+    background-color: #176087;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel-right {
+    background-color: #53A2BE;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-box {
+    width: 66vh;
+    height: 66vh;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+/* Elements */
+
+.title {
+    color: #fff;
+    font-family: 'Parisienne', cursive;
+    font-size: 36px;
+    margin-left: 60px;
+}
+
+.options-panel {
+    color: #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    padding-top: 60px;
+}
