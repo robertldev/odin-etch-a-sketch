@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="text/javascript" defer></script>
 </head>
 <body>
     <div class="header">
@@ -16,7 +17,14 @@
     <div class="content-container">
         <div class="panel-left">
             <p class="options-panel">
-                Options
+                Generate new grid
+            </p>
+            <p>
+                <form>
+                    <label for="grid-size" class="form-text">Grid size: </label>
+                    <input type="text" id="grid-size" name="grid-size"></input><br><br>
+                    <input type="submit" value="Submit" onclick="formSubmission()">
+                </form>
             </p>
         </div>
         <div class="panel-right">
