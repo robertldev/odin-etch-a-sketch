@@ -20,10 +20,15 @@ function generateNewGrid(gridSize) {
 /* Generate the correct number of boxes on load */
 generateNewGrid(16);
 
-/* Receive form data */
+/* Receive form data, clear the existing grid and generate a new one */
 function formSubmission() {
-    let inputRequest = document.getElementById('grid-size').value;
+    let inputRequest = Number(document.getElementById('grid-size').value);
+    if (Number.isInteger(inputRequest) === false || inputRequest > 100) {
+        return
+    }
+    let currentGrid = document.getElementsByClassName('grid-item');
+    for (let i=currentGrid.length-1; i>=0; i--) {
+        currentGrid[i].remove();
+    }
     generateNewGrid(inputRequest);
 }
-
-/* Why is this immediately disappearing? Also need to add clear function */

@@ -21,9 +21,9 @@
             </p>
             <p>
                 <form>
-                    <label for="grid-size" class="form-text">Grid size: </label>
-                    <input type="text" id="grid-size" name="grid-size"></input><br><br>
-                    <input type="submit" value="Submit" onclick="formSubmission()">
+                    <label for="grid-size" class="form-text">Grid size (0-100): </label>
+                    <input type="text" id="grid-size" name="grid-size" min="0" max="100"></input><br><br>
+                    <input type="button" value="Submit" onclick="formSubmission()">
                 </form>
             </p>
         </div>
