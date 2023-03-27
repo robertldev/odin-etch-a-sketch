@@ -1,3 +1,10 @@
+/* Stole this function from StackOverflow for creating a random RGB colour! */
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
 /* Our function for generating a new grid */
 
 function generateNewGrid(gridSize) {
@@ -14,6 +21,9 @@ function generateNewGrid(gridSize) {
     itemList.forEach(function (item) {
     item.style.height = itemSize;
     item.style.flex = '0 0 ' + itemSize;
+    item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = random_rgba();
+    })
     });
 }
 
